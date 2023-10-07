@@ -12,7 +12,7 @@
         <meta name="handhelFriendly" content="true">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="manifest" href="{{asset('resources/js/manifest.json')}}">
+        {{--  <link rel="manifest" href="{{asset('js/manifest.json')}}">  --}}
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -21,10 +21,10 @@
 
         <!-- Scripts -->
         <link rel="stylesheet" href="{{asset('/css/app.css')}}">
-        <script href="{{asset('resources/js/main.js')}}" defer></script>
+        {{--  <script href="{{asset('js/main.js')}}" defer></script>  --}}
         
         {{--  @vite(['resources/css/app.css', 'resources/js/app.js'])  --}}
-        
+        @laravelPWA
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

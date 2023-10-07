@@ -11,7 +11,7 @@
         <meta name="handhelFriendly" content="true">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="manifest" href="./manifest.json">
+        {{--  <link rel="manifest" href="{{asset('js/manifest.json')}}">  --}}
         
         <title>Laravel</title>
 
@@ -28,7 +28,8 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-        {{--  <script href="{{asset('resources/js/main.js')}}" defer></script>  --}}
+        {{--  <script href="{{asset('js/main.js')}}" defer></script>  --}}
+        @laravelPWA
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
