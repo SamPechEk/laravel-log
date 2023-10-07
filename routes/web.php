@@ -20,5 +20,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-
+Route::get('/offline', function(){
+    return view('vendor.laravelpwa.offline');
+});
 require __DIR__.'/auth.php';
