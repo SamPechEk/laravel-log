@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\ConfirmadosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +26,5 @@ Route::get('/offline', function(){
     return view('vendor.laravelpwa.offline');
 });
 require __DIR__.'/auth.php';
+Route::resource('/estados',EstadoController::class);
+Route::resource('/confirmados',ConfirmadosController::class);
