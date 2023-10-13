@@ -12,5 +12,5 @@ class Confirmado extends Model
     // protected $primarykey = 'estado_id';
     // public $incrementing = false;
     public $timestamps = false;
-    protected $attributes = ['fecha','casos'];
+    protected $attributes = ['fecha','casos']; 
 }
