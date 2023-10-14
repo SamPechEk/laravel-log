@@ -18,30 +18,30 @@ class TotalController extends Controller
        
         $confirmados = Confirmado::all();
         $acumulado = 0;
-        foreach ($confirmados as $k => $casos) {
-            $acumulado+=$k;
+        foreach ($confirmados as $key) {
+            $acumulado+=$key->casos;
         }
         $datos['confirmadosTotales']=$acumulado;
 
         $negativos = Negativo::all();
         $acumulado = 0;
-        foreach ($negativos as $k => $casos) {
-            $acumulado+=$k;
+        foreach ($negativos as $key) {
+            $acumulado+=$key->casos;
         }
         $datos['negativosTotales']=$acumulado;
 
         $defunciones = Defuncion::all();
         $acumulado = 0;
-        foreach ($defunciones as $k => $casos) {
-            $acumulado+=$k;
+        foreach ($defunciones as $key) {
+            $acumulado+=$key->casos;
         }
         $datos['defuncionesTotales']=$acumulado;
         $datos['estados'] = Estado::all();
 
         $sospechoso = Sospechoso::all();
         $acumulado = 0;
-        foreach ($sospechoso as $k => $casos) {
-            $acumulado+=$k;
+        foreach ($sospechoso as $key) {
+            $acumulado+=$key->casos;
         }
         $datos['sospechososTotales']=$acumulado;
         $datos['id'] = 0;
