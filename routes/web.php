@@ -3,6 +3,7 @@
 use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\ConfirmadosController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TotalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/total', function () {
-    return view('total');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -32,3 +30,6 @@ Route::get('/offline', function(){
 require __DIR__.'/auth.php';
 Route::resource('/estados',EstadoController::class);
 Route::resource('/confirmados',ConfirmadosController::class);
+Route::get('/total',[TotalController::class, 'index'])->name('total');;
+Route::get('filter/{id}', [TotalController::class, 'filter'])
+->name('filterR');

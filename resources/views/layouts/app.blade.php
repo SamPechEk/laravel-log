@@ -24,7 +24,10 @@
         {{--  <script href="{{asset('js/main.js')}}" defer></script>  --}}
         
         {{--  @vite(['resources/css/app.css', 'resources/js/app.js'])  --}}
+        <script href="{{asset('/js/total.js')}}"></script>
         @laravelPWA
+
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -43,4 +46,5 @@
             </main>
         </div>
     </body>
+    
 </html>
