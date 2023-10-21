@@ -45,6 +45,24 @@ class TotalController extends Controller
         }
         $datos['sospechososTotales']=$acumulado;
         $datos['id'] = 0;
+        $datos['datos'] = [
+            [
+                "tipo" => "Confirmados",
+                "cantidad" => $datos['confirmadosTotales'],
+            ],
+            [
+                "tipo" => "Negativos",
+                "cantidad" => $datos['negativosTotales'],
+            ],
+            [
+                "tipo" => "Defunciones",
+                "cantidad" => $datos['defuncionesTotales'],
+            ],
+            [
+                "tipo" => "Sospechosos",
+                "cantidad" => $datos['sospechososTotales'],
+            ],
+        ];
         return view('total')->with($datos);
     }
     
@@ -81,7 +99,24 @@ class TotalController extends Controller
             $acumulado+=$key->casos;
         }
         $datos['sospechososTotales']=$acumulado;
-
+        $datos['datos'] = [
+            [
+                "tipo" => "Confirmados",
+                "cantidad" => $datos['confirmadosTotales'],
+            ],
+            [
+                "tipo" => "Negativos",
+                "cantidad" => $datos['negativosTotales'],
+            ],
+            [
+                "tipo" => "Defunciones",
+                "cantidad" => $datos['defuncionesTotales'],
+            ],
+            [
+                "tipo" => "Sospechosos",
+                "cantidad" => $datos['sospechososTotales'],
+            ],
+        ];
         $datos['id']=$id;
         return view('total')->with($datos);
         

@@ -28,6 +28,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@amcharts/amcharts4": "^4.10.38",
         "vuejs-datatable": "^2.0.0-alpha.7"
     }
 }
