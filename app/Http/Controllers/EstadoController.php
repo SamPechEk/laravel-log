@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 
 class EstadoController extends Controller
 {
-    public function show(string $id): View{
-       
-        dd(Estado::find($id));
+    public function index() 
+    {
+        return view('estados.index');
+    }
+
+    
+    public function getEstados ()
+    {
+        return response()->json(Estado::get());
     }
 }
