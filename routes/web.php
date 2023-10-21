@@ -31,6 +31,10 @@ require __DIR__.'/auth.php';
 Route::get('/estados/getEstados', [EstadoController::class,'getEstados']);
 Route::resource('/estados', EstadoController::class);
 Route::resource('/confirmados',ConfirmadosController::class);
-Route::get('/total',[TotalController::class, 'index'])->name('total');;
+Route::get('/total',[TotalController::class, 'index'])->name('total');
 Route::get('filter/{id}', [TotalController::class, 'filter'])
 ->name('filterR');
+
+Route::get('/totalMonth',[TotalController::class, 'indexMonth'])->name('totalMonth');
+Route::get('filterM/{mes}', [TotalController::class, 'filterMonth'])
+->name('filterM');

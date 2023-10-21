@@ -13,7 +13,7 @@ class Defuncion extends Model
     protected $primarykey = 'estado_id';
     public $incrementing = false;
     public $timestamps = false;
-    protected $attributes = ['fecha','casos']; 
+    protected $attributes = ['estado_id','fecha','casos']; 
     public function estados():BelongsTo
     {
         return $this->belongsTo(Estado::class, 'estado_id');

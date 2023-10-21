@@ -26,6 +26,7 @@ Vue.use(VuejsDatatableFactory);
 Vue.component('datatable-component', require('./components/DatatableComponent.vue').default);
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('chart-component', require('./components/ChartComponent.vue').default);
+Vue.component('top-component', require('./components/TopComponent.vue').default);
 
 
 /**
